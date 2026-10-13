@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160d27">
+  <title>English Secret Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">🔮 English Secret Academy</div>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menú" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" id="navigation">
+      <button class="tab active" data-tab="inicio">Inicio</button>
+      <button class="tab" data-tab="academia">Academia</button>
+      <button class="tab" data-tab="lecciones">Lecciones</button>
+      <button class="tab" data-tab="practica">Práctica</button>
+      <button class="tab" data-tab="videos">Videos</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="page active" id="inicio">
+      <div class="hero">
+        <p class="eyebrow">✦ TU AVENTURA COMIENZA AQUÍ ✦</p>
+        <h1>Welcome to the<br>
+          <span>Secret Academy</span>
+        </h1>
+        <p>
+          Descubre el mundo mágico del inglés.
+          Aprende, practica y desbloquea nuevos conocimientos.
+        </p>
+        <button class="primary-btn" data-go="academia">
+          Entrar a la academia ✨
+        </button>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🏰</div>
+          <h3>Explora</h3>
+          <p>Descubre tu nueva academia de inglés.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📚</div>
+          <h3>Aprende</h3>
+          <p>Estudia gramática y vocabulario.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🪄</div>
+          <h3>Practica</h3>
+          <p>Resuelve ejercicios y mejora tu inglés.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="academia">
+      <div class="section-heading">
+        <p class="eyebrow">✦ DESCUBRE TU MUNDO ✦</p>
+        <h2>La Academia</h2>
+        <p>Elige tu camino y comienza tu aventura.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🧙</div>
+          <h3>Los Guardianes</h3>
+          <p>Prepárate para dominar los secretos del inglés.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🗝️</div>
+          <h3>Las Misiones</h3>
+          <p>Completa actividades para poner a prueba lo aprendido.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⭐</div>
+          <h3>Tu progreso</h3>
+          <p>Practica con constancia y construye tus habilidades.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="lecciones">
+      <div class="section-heading">
+        <p class="eyebrow">✦ EL CONOCIMIENTO ES PODER ✦</p>
+        <h2>Lecciones de inglés</h2>
+        <p>Selecciona una lección para estudiar.</p>
+      </div>
+
+      <div class="lesson-grid">
+        <article class="card lesson">
+          <span class="lesson-number">01</span>
+          <h3>Simple Past</h3>
+          <p>Usamos el pasado simple para hablar de acciones terminadas.</p>
+          <div class="example">
+            <strong>Example:</strong>
+            <p>I visited my grandmother yesterday.</p>
+            <small>Visité a mi abuela ayer.</small>
+          </div>
+        </article>
+
+        <article class="card lesson">
+          <span class="lesson-number">02</span>
+          <h3>Present Perfect</h3>
+          <p>Usamos have/has + participio para conectar experiencias o acciones con el presente.</p>
+          <div class="example">
+            <strong>Example:</strong>
+            <p>I have visited London.</p>
+            <small>He visitado Londres.</small>
+          </div>
+        </article>
+
+        <article class="card lesson">
+          <span class="lesson-number">03</span>
+          <h3>Vocabulary</h3>
+          <p>Aprende palabras y expresiones nuevas en inglés.</p>
+          <div class="example">
+            <strong>Useful words:</strong>
+            <p>Discover · Learn · Believe</p>
+            <small>Descubrir · Aprender · Creer</small>
+          </div>
+        </article>
+      </div>
+
+      <button class="primary-btn" data-go="practica">
+        Practicar lo aprendido →
+      </button>
+    </section>
+
+    <section class="page" id="practica">
+      <div class="section-heading">
+        <p class="eyebrow">✦ PON A PRUEBA TU MAGIA ✦</p>
+        <h2>Zona de práctica</h2>
+        <p>Responde la pregunta y comprueba tu respuesta.</p>
+      </div>
+
+      <div class="quiz card">
+        <div class="quiz-top">
+          <span>Pregunta de gramática</span>
+          <span id="questionCounter">1 / 3</span>
+        </div>
+
+        <h3 id="question">Yesterday, I ___ to school.</h3>
+
+        <div class="answers" id="answers">
+          <button class="answer" data-answer="0">go</button>
+          <button class="answer" data-answer="1">went</button>
+          <button class="answer" data-answer="2">gone</button>
+        </div>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+
+        <button class="primary-btn" id="nextQuestion" hidden>
+          Siguiente pregunta →
+        </button>
+
+        <p class="score">Puntuación: <strong id="score">0</strong></p>
+      </div>
+    </section>
+
+    <section class="page" id="videos">
+      <div class="section-heading">
+        <p class="eyebrow">✦ APRENDE ESCUCHANDO ✦</p>
+        <h2>Biblioteca de videos</h2>
+        <p>Utiliza estos recursos para reforzar tus conocimientos.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3>Simple Past</h3>
+          <p>Busca explicaciones y ejemplos del pasado simple.</p>
+          <a href="https://www.youtube.com/results?search_query=simple+past+tense+English+lesson"
+             target="_blank" rel="noopener noreferrer">
+            Ver videos →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="icon">📺</div>
+          <h3>Present Perfect</h3>
+          <p>Aprende cuándo utilizar have y has.</p>
+          <a href="https://www.youtube.com/results?search_query=present+perfect+English+lesson"
+             target="_blank" rel="noopener noreferrer">
+            Ver videos →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎧</div>
+          <h3>Listening</h3>
+          <p>Practica tu comprensión auditiva en inglés.</p>
+          <a href="https://www.youtube.com/results?search_query=English+listening+practice+for+beginners"
+             target="_blank" rel="noopener noreferrer">
+            Ver videos →
+          </a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>🔮 English Secret Academy</p>
+    <small>Learn English. Discover your magic.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
